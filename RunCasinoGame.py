@@ -24,7 +24,7 @@ def parier_sur_couleur(points):
         print(f"Aww, vous avez eu un joker, donc vous avez perdu {points} points.")
         return points
 def parier_sur_suite(points):
-    mise = float(input("Combien voulez-vous parier ? "))
+    mise = int(input("Combien voulez-vous parier ? "))
     suite = input("Sur quelle suite voulez-vous parier (co, ca, pi, tre) ? ")
 
     suites_cartes = ['co', 'ca', 'pi', 'tre']
