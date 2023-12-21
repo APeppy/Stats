@@ -20,7 +20,7 @@ def parier_sur_couleur(points):
             points = mise
             print(f"La carte pigee est un {random.randint(1, 13)} de {couleur_tiree}. Vous avez perdu {points} points.")
             return points
-    else:
+    elif random.randint(1, 54) <= 2:
         print(f"Aww, vous avez eu un joker, donc vous avez perdu {points} points.")
         return points
 def parier_sur_suite(points):
