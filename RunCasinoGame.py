@@ -23,19 +23,19 @@ def parier_sur_couleur(points):
     elif random.randint(1, 54) <= 2:
         print(f"Aww, vous avez eu un joker, donc vous avez perdu {points} points.")
         return points
-def parier_sur_suite(points):
+def parier_sur_enseigne(points):
     mise = int(input("Combien voulez-vous parier ? "))
-    suite = input("Sur quelle suite voulez-vous parier (co, ca, pi, tre) ? ")
+    enseigne = input("Sur quelle enseigne voulez-vous parier (co, ca, pi, tre) ? ")
 
-    suites_cartes = ['co', 'ca', 'pi', 'tre']
-    suite_tiree = random.choice(suites_cartes)
+    enseignes_cartes = ['co', 'ca', 'pi', 'tre']
+    enseigne_tiree = random.choice(enseignes_cartes)
     if random.randint(1, 54) > 2:
-        if suite == suite_tiree:
+        if enseigne == enseigne_tiree:
             points = mise * 3
-            print(f"La carte tiree est {random.randint(1, 13)} {suite_tiree} ! Vous avez gagné : {points} points.")
+            print(f"La carte tiree est {random.randint(1, 13)} {enseigne_tiree} ! Vous avez gagné : {points} points.")
         else:
             points = mise
-            print(f"La carte tiree est {random.randint(1, 13)} {suite_tiree}. Vous avez perdu : {points} points.")
+            print(f"La carte tiree est {random.randint(1, 13)} {enseigne_tiree}. Vous avez perdu : {points} points.")
     elif random.randint(1, 54) <= 2:
         points = mise
         print(f" Aw, Vous avez eu un joker! Vous avez perdu : {points} points.")
@@ -57,7 +57,7 @@ points_joueur = 0  # Montant d'points initial
 while True:
     print("\nMenu:")
     print("1. Parier sur une couleur")
-    print("2. Parier sur une suite")
+    print("2. Parier sur une enseigne")
     print("3. Parier sur un joker")
     print("4. Quitter le jeu")
 
@@ -66,7 +66,7 @@ while True:
     if choix == '1':
         points_joueur = parier_sur_couleur(points_joueur)
     elif choix == '2':
-        points_joueur = parier_sur_suite(points_joueur)
+        points_joueur = parier_sur_enseigne(points_joueur)
     elif choix == '3':
         points_joueur = parier_sur_joker(points_joueur)
     elif choix == '4':
