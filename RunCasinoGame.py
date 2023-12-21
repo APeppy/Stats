@@ -37,6 +37,8 @@ def parier_sur_suite(points):
             points = mise
             print(f"La carte tiree est {random.randint(1, 13)} {suite_tiree}. Vous avez perdu : {points} points.")
     elif random.randint(1, 54) <= 2:
+        points = mise
+        print(f" Aw, Vous avez eu un joker! Vous avez perdu : {points} points.")
         return points
 
 def parier_sur_joker(points):
