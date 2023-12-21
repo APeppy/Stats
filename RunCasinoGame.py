@@ -1,7 +1,5 @@
 import random
 
-import random
-
 def parier_sur_couleur(points):
     mise = int(input("Combien voulez-vous parier ? "))
     couleur = input("Sur quelle couleur voulez-vous parier (r ou n) ? ")
